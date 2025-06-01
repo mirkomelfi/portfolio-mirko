@@ -17,8 +17,7 @@ body {
   padding: 0 2rem;
 }
 
-/* --- NAVBAR --- */
-
+/* ----------- HEADER BASE ----------- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -81,6 +80,81 @@ body {
 .btn-nav:hover {
   background-color: #0056b3;
 }
+
+/* ----------- MOBILE MENU ----------- */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Overlay oscuro al abrir el menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  display: none;
+}
+
+/* Menú lateral */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 60vw;
+  background-color: #ccd0e0;
+  padding: 2rem;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu ul li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-header button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+@media (max-width: 768px) {
+  .nav-links,
+  .btn-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
 
 /* === HERO SECTION === */
 

@@ -7,13 +7,22 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+      <style>
+    /*Para que baje suave hasta el ID marcado*/
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
 
-  <header class="header">
+<header class="header">
   <div class="logo">Mirko<span>Melfi.</span></div>
+
   <nav class="navbar">
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#quien-soy">Quién soy</a></li>
       <li><a href="#formacion">Formación</a></li>
@@ -22,10 +31,33 @@
     </ul>
     <a href="#contacto" class="btn-nav">Contactame</a>
   </nav>
+
+    <!-- Botón hamburguesa solo visible en mobile -->
+  <div class="hamburger" id="hamburger">☰</div>
+
+  <!-- Overlay oscuro -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Menú mobile lateral -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+      <span class="logo">Mirko<span>Melfi.</span></span>
+      <button id="closeMenu">✕</button>
+    </div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#quien-soy">Quién soy</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contactame</a></li>
+    </ul>
+  </div>
 </header>
 
 
-<section class="hero">
+
+<section id="inicio" class="hero">
   <div class="hero-content">
     <div class="hero-texto">
       <p class="intro">Hola, soy Mirko Melfi</p>
@@ -133,6 +165,32 @@
   <footer>
     <p>© 2025 Mirko Melfi. Todos los derechos reservados.</p>
   </footer>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const overlay = document.getElementById("overlay");
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  const openMenu = () => {
+    mobileMenu.style.display = "flex";
+    overlay.style.display = "block";
+  };
+
+  const closeMobileMenu = () => {
+    mobileMenu.style.display = "none";
+    overlay.style.display = "none";
+  };
+
+  hamburger.addEventListener("click", openMenu);
+  closeMenu.addEventListener("click", closeMobileMenu);
+  overlay.addEventListener("click", closeMobileMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+</script>
+
 
 </body>
 </html>
