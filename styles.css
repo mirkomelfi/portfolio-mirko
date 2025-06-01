@@ -270,6 +270,40 @@ body {
   background-color: #0B0E29;
   color: white;
 }
+/*opcion1
+.quien-soy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.quien-soy-grid p {
+  text-align: justify;
+}*/
+
+/*opcion2
+.quien-soy-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; 
+}
+
+.quien-soy-grid p {
+  flex: 1;
+  text-align: justify;
+}*/
+
+
+/*
+
+@media (max-width: 768px) {
+  .quien-soy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+*/
 
 .formacion {
   background-color: #f4f4f4;
