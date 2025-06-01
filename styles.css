@@ -142,6 +142,29 @@ body {
   transform: translateY(30px);
 }
 
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-texto .intro {
+    font-size: 0.9rem;
+  }
+
+  .hero-texto .descripcion {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hero-imagen img {
+    height: 200px;
+  }
+}
 
 
 /* RESPONSIVE */
