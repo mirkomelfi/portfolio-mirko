@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mirko Melfi - Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">Mirko<span>Melfi.</span></div>
+
+  <nav class="navbar">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Home</a></li>
+      <li><a href="#quien-soy">About Me</a></li>
+      <li><a href="#formacion">Education</a></li>
+      <li><a href="#habilidades">Skills</a></li>
+      <li><a href="#proyectos">Projects</a></li>
+    </ul>
+    <a href="#contacto" class="btn-nav">Contact Me</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">☰</div>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+      <span class="logo">Mirko<span>Melfi.</span></span>
+      <button id="closeMenu">✕</button>
+    </div>
+    <ul>
+      <li><a href="#inicio">Home</a></li>
+      <li><a href="#quien-soy">About Me</a></li>
+      <li><a href="#formacion">Education</a></li>
+      <li><a href="#habilidades">Skills</a></li>
+      <li><a href="#proyectos">Projects</a></li>
+      <li><a href="#contacto">Contact Me</a></li>
+    </ul>
+  </div>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <div class="hero-texto">
+      <p class="intro">Hi, I'm Mirko Melfi</p>
+      <h1>Full Stack Developer</h1>
+      <p class="descripcion">
+        I'm seeking opportunities to join a development team and continue growing professionally.
+        On this website, I share real projects, technologies I work with, and how I apply good development practices.
+        Thank you for visiting my portfolio.
+      </p>
+      <a href="index.html" class="btn-lang">Español</a>
+    </div>
+    <div class="hero-imagen">
+      <img src="assets/fotomirko.png" alt="Photo of Mirko Melfi" />
+    </div>
+  </div>
+</section>
+
+<section class="quien-soy" id="quien-soy">
+  <h2>About Me</h2>
+  <div class="quien-soy-texto">
+    <p>
+      I am an <strong>organized</strong>, <strong>curious</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Computer Engineering</strong> degree, having completed over 85% of the courses and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I continue <strong>training</strong>, learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
+      <br><br>
+      Beyond my academic background, I lead two <strong>personal projects</strong> that showcase my <strong>entrepreneurial</strong> spirit. Since the age of 17, I have managed a <strong>dog training business</strong>, personally handling <strong>client communication</strong>, <strong>understanding their needs</strong>, and <strong>conducting classes</strong>, achieving over <strong>1000 successful cases</strong> with proven results. This experience has honed my <strong>ability to explain concepts</strong>, build <strong>trust</strong>, and maintain <strong>effective communication</strong> with diverse audiences. Part of this journey can be seen on <a href="https://adiestramientocaninojirok.com" target="_blank">the business website</a>.
+      <br><br>
+      More recently, after years of freelancing, I founded a <strong>web design studio</strong> where we develop <strong>modern websites</strong> for professionals and small businesses, applying best practices in <strong>UX/UI</strong>, <strong>responsive design</strong>, and <strong>SEO</strong>. In this role, I not only handle the technical aspects but also <strong>sell projects</strong>, <strong>negotiate budgets</strong>, <strong>communicate with clients</strong>, and ensure a <strong>clear, approachable, and professional experience</strong>, as well as <strong>leading</strong> the team working with me. This has enhanced my <strong>commercial profile</strong>, <strong>persuasion skills</strong>, and <strong>human approach</strong>, which I consider key in any professional setting. <br>Both experiences have strengthened my <strong>organizational</strong>, <strong>leadership</strong>, and <strong>communication</strong> skills, complementing my academic background in computer science.
+    </p>
+  </div>
+</section>
+
+<section class="formacion" id="formacion">
+  <h2>Education</h2>
+  <div class="formacion-grid">
+
+    <div class="card-formacion">
+      <h3>Software Engineering</h3>
+      <p>Universidad Argentina de la Empresa (UADE)</p>
+      <span>March 2021 – Present</span>
+    </div>
+
+    <div class="card-formacion">
+      <h3>Full Stack Developer</h3>
+      <p>Coderhouse, Buenos Aires</p>
+      <span>June 2022 – July 2023</span>
+    </div>
+
+    <div class="card-formacion">
+      <h3>Application Developer</h3>
+      <p>Coderhouse, Buenos Aires</p>
+      <span>March 2022 – January 2023</span>
+    </div>
+
+    <div class="card-formacion">
+      <h3>Frontend React Developer</h3>
+      <p>Coderhouse, Buenos Aires</p>
+      <span>March 2022 – October 2022</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="habilidades" id="habilidades">
+  <div class="habilidades-wrapper">
+    <div class="habilidades-titulo">
+      <h2>My<br>Skills</h2>
+    </div>
+    <div class="habilidades-contenido">
+
+      <div class="grupo-habilidades">
+        <h3>Backend</h3>
+        <ul>
+          <li>Java (Spring Boot)</li>
+          <li>JavaScript (Node JS)</li>
+          <li>Python (basic)</li>
+        </ul>
+      </div>
+
+      <div class="grupo-habilidades">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML5 & CSS3</li>
+          <li>React JS</li>
+          <li>React Native (Expo)</li>
+        </ul>
+      </div>
+
+      <div class="grupo-habilidades">
+        <h3>Databases</h3>
+        <ul>
+          <li>Modeling (ERD, normalization)</li>
+          <li>MySQL (Hibernate)</li>
+          <li>MongoDB (Mongoose)</li>
+        </ul>
+      </div>
+
+      <div class="grupo-habilidades">
+        <h3>Tools</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>StarUML (diagrams)</li>
+          <li>Agile methodologies - Scrum</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="proyectos" class="proyectos">
+  <div class="contenedor">
+    <h2>My Projects</h2>
+    <div class="grid-proyectos">
+
+      <div class="proyecto-card">
+        <img src="assets/adiestramiento.png" alt="Dog Training Website" />
+        <div class="etiquetas">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <h3>Jirok - Dog Training</h3>
+        <p>Informative website presenting dog training services, including sections on techniques used, basic information about the work, and testimonials from satisfied clients, linked to Google reviews.</p>
+      </div>
+
+      <div class="proyecto-card">
+        <img src="assets/melfistudio.png" alt="Web Design Studio Website" />
+        <div class="etiquetas">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <h3>Melfi Studio - Web & Design</h3>
+        <p>Professional landing page showcasing the services offered by the web design studio, including a portfolio of completed projects and a focus on responsive design and SEO.</p>
+      </div>
+
+<!-- Project 3: Building Claims System -->
+<div class="proyecto-card">
+  <img src="assets/melfistudio.png" alt="Building Claims System">
+  <div class="etiquetas">
+    <span>React JS</span>
+    <span>Java</span>
+    <span>MySQL</span>
+  </div>
+  <h3>Building Claims System</h3>
+  <p>Full stack application that allows owners, tenants, and managers to manage claims related to the building, whether for common areas or their own unit, facilitating communication and follow-up.</p>
+</div>
+
+<!-- Project 4: Physical Item Tracking System -->
+<div class="proyecto-card">
+  <img src="assets/melfistudio.png" alt="Physical Item Tracking System">
+  <div class="etiquetas">
+    <span>React JS</span>
+    <span>Java</span>
+    <span>MySQL</span>
+  </div>
+  <h3>Item Management System</h3>
+  <p>System that allows office employees to search for physical items using QR codes. Each object and area is associated with a QR, ensuring traceability and location efficiency.</p>
+</div>
+
+<!-- Project 5: Dog Training Ecommerce -->
+<div class="proyecto-card">
+  <img src="assets/melfistudio.png" alt="Dog Training Ecommerce">
+  <div class="etiquetas">
+    <span>React JS</span>
+    <span>JavaScript</span>
+    <span>MongoDB</span>
+  </div>
+  <h3>Dog Training Ecommerce</h3>
+  <p>E-commerce platform offering services and products related to dog training, including features like shopping cart, user management, and payment gateway integration.</p>
+</div>
+
+<!-- Project 6: Mobile App for Municipal Management -->
+<div class="proyecto-card">
+  <img src="assets/melfistudio.png" alt="Municipal Management App">
+  <div class="etiquetas">
+    <span>React Native</span>
+    <span>Java</span>
+    <span>MySQL</span>
+  </div>
+  <h3>Municipal Management System</h3>
+  <p>Mobile application that allows citizens to report public space issues and promote local services. Municipal employees can manage these reports, update statuses, and assign them accordingly.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="contacto-txt">
+    <h1>Let's<br>Work Together!</h1>
+    <div class="contacto-iconos">
+      <div class="items-contact">
+        <a href="https://wa.me/541133169586" target="_blank">
+          <img src="assets/wpp.png" alt="WhatsApp">
+        </a>
+        <p>+54 9 11 3316 9586</p>
+      </div>
+      <div class="items-contact">
+        <a href="mailto:mmelfideveloper@gmail.com" target="_blank">
+          <img src="assets/gmail.png" alt="Email">
+        </a>
+        <p>mmelfideveloper@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Mirko Melfi. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const overlay = document.getElementById("overlay");
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  const openMenu = () => {
+    mobileMenu.style.display = "flex";
+    overlay.style.display = "block";
+  };
+
+  const closeMobileMenu = () => {
+    mobileMenu.style.display = "none";
+    overlay.style.display = "none";
+  };
+
+  hamburger.addEventListener("click", openMenu);
+  closeMenu.addEventListener("click", closeMobileMenu);
+  overlay.addEventListener("click", closeMobileMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+</script>
+
+</body>
+</html>
