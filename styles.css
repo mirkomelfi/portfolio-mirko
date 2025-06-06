@@ -5,11 +5,18 @@
   font-family: "Instrument Sans";
 }
 
+:root {
+  --secundario: #f4f4f4;  
+  --primario: #0B0E29;
+  --azul-oscuro: #1a1a1a;
+  --azul-francia:#007bff;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #1a1a1a;
+  background-color: var(--secundario);
+  color: var(--azul-oscuro);
 }
 
 .contenedor {
@@ -24,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 3rem;
-  background-color: #ffffff;
+  background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -39,7 +46,7 @@ body {
 }
 
 .logo span {
-  color: #007bff;
+  color: var(--azul-francia);
 }
 
 .navbar {
@@ -65,11 +72,11 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #007bff;
+  color: var(--azul-francia);
 }
 
 .btn-nav {
-  background-color: #007bff;
+  background-color: var(--azul-francia);
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -168,7 +175,7 @@ body {
 }
 
 .hero-content {
-  background-color: #0B0E29;
+  background-color: var(--primario);
   border-radius: 40px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -267,7 +274,7 @@ body {
 }
 
 .quien-soy {
-  background-color: #0B0E29;
+  background-color: var(--primario);
   color: white;
 }
 /*opcion1
@@ -306,7 +313,7 @@ body {
 */
 
 .formacion {
-  background-color: #f4f4f4;
+  background-color: var(--secundario);
   padding: 4rem 2rem;
 }
 
@@ -314,7 +321,7 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
-  color: #0B0E29;
+  color: var(--primario);
 }
 
 .formacion-grid {
@@ -343,7 +350,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  color: var(--azul-oscuro);
 }
 
 .card-formacion p {
@@ -371,7 +378,7 @@ body {
 }
 
 .habilidades-titulo {
-  background-color: #0B0E29;
+  background-color: var(--primario);
   padding: 2rem;
   border-radius: 12px;
   color: white;
@@ -390,7 +397,7 @@ body {
 }
 
 .grupo-habilidades {
-  background-color: #0B0E29;
+  background-color: var(--primario);
   color: white;
   border-radius: 12px;
   padding: 1.5rem;
@@ -404,7 +411,7 @@ body {
 .grupo-habilidades h3 {
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  color: #ffffff;
+  color: white;
 }
 
 .grupo-habilidades ul {
@@ -430,10 +437,125 @@ body {
   }
 }
 
+.proyectos {
+  padding: 4rem 2rem;
+  background-color: var(--primario); /* fondo oscuro */
+  color: white;
+}
+
+.proyectos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-height: auto; 
+}
+
+.proyecto-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.proyecto-card img {
+  width: 100%;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.proyecto-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.proyecto-card p {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: justify;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.etiquetas span {
+  background-color: var(--azul-francia);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1a1a1a;
+  background: var(--azul-oscuro);
   color: white;
+}
+.contacto {
+  display: flex;
+  padding-left: 5rem;
+  background-color: var(--secundario);
+}
+.contacto-iconos{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.items-contact{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contacto img{
+  height: 45px;
+  width: 45px;
+}
+
+.contacto-txt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.contacto-txt h1{
+  font-size: 34px;
 }
