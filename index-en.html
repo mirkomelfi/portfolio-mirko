@@ -240,24 +240,41 @@
 </div>
 </section>
 
+<section class="contacto-form">
 <section id="contacto" class="contacto">
   <div class="contacto-txt">
-    <h1>Let's<br>Work Together!</h1>
+    <h1>Contact me!</h1>
     <div class="contacto-iconos">
       <div class="items-contact">
         <a href="https://wa.me/541133169586" target="_blank">
-          <img src="assets/wpp.png" alt="WhatsApp">
+          <img src="assets/icono-wpp.png" alt="WhatsApp">
         </a>
         <p>+54 9 11 3316 9586</p>
       </div>
       <div class="items-contact">
-        <a href="mailto:mmelfideveloper@gmail.com" target="_blank">
-          <img src="assets/gmail.png" alt="Email">
+        <a href="mailto:contacto@mirkomelfi.com.ar" target="_blank">
+          <img src="assets/icono-gmail.png" alt="Email">
         </a>
-        <p>mmelfideveloper@gmail.com</p>
+        <p>contacto@mirkomelfi.com.ar</p>
+      </div>
+      <div class="items-contact">
+        <a href="https://linkedin.com/in/mirko-melfi-93bb242aa" target="_blank">
+          <img src="assets/icono-link.png" alt="LinkedIn">
+        </a>
+        <p>LinkedIn Profile</p>
       </div>
     </div>
   </div>
+</section>
+<section id="form" class="form">
+<form class="form-contacto" id="form-contacto">
+  <input type="text" name="from_name" placeholder="Name" required>
+  <input type="email" name="reply_to" placeholder="Email" required>
+  <textarea name="message" rows="4" placeholder="Message..." required></textarea>
+  <button type="submit">Send message</button>
+</form>
+
+</section>
 </section>
 
 <footer>
@@ -287,6 +304,26 @@
 
   menuLinks.forEach(link => {
     link.addEventListener("click", closeMobileMenu);
+  });
+</script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("-OIQzzIUuKCMTulfD"); // ⚠️ reemplazá con tu key
+  })();
+
+  document.getElementById("form-contacto").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_mirko_portfolio", "template_tw28hwe", this)
+      .then(() => {
+        alert("Email sent!");
+        this.reset();
+      }, (error) => {
+        alert("Error. Try again.");
+        console.error(error);
+      });
   });
 </script>
 
