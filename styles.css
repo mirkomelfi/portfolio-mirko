@@ -18,6 +18,11 @@ body {
   color: var(--azul-oscuro);
 }
 
+a:visited {
+  color: var(--azul-francia);
+  text-decoration: none; /* opcional */
+}
+
 .contenedor {
   max-width: 1300px;
   margin: 0 auto;
@@ -816,4 +821,62 @@ footer {
   .items-contact p {
     font-size: 0.95rem;
   }
+}
+
+
+/*prueba acordeon*/
+
+@media (max-width: 768px) {
+  .accordion-section {
+    margin-top: 1rem;
+  }
+
+  .accordion-btn {
+    width: 100%;
+    padding: 0.9rem;
+    text-align: left;
+    font-weight: 600;
+    background-color: #0b0d2c;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .accordion-btn:hover {
+    background-color: #141740;
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 1rem;
+    background-color: #11132f;
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid #222;
+  }
+  .accordion-content a{
+  text-decoration: none;
+  }
+  .accordion-content a:hover{
+    text-decoration: underline;
+  }
+}
+
+/* En desktop ocultamos el acordeón */
+@media (min-width: 769px) {
+  .accordion-section {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .quien-soy-texto {
+    display: none;
+  }
+  .quien-soy h2{
+    padding: 0rem;
+}
 }

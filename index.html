@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Mirko Melfi - Desarrollador Full Stack</title>
-    <link rel="stylesheet" href="styles.css?v=1.4">
+    <link rel="stylesheet" href="styles.css?v=1.5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@
   <div class="hero-content">
     <div class="hero-texto">
       <p class="intro">Hola, soy Mirko Melfi</p>
-      <h1>Desarrollador Full Stack</h1>
+      <h1>Analista en Informática</h1>
       <p class="descripcion">
           Busco oportunidades para integrarme a un equipo de desarrollo y seguir creciendo profesionalmente.  
           En esta web comparto proyectos reales, tecnologías que manejo y cómo aplico buenas prácticas de desarrollo.  
@@ -92,6 +92,29 @@
         Más recientemente, luego de años trabajando como <strong>freelancer</strong>, fundé un <strong>estudio de diseño web</strong>, en el que desarrollamos <strong>sitios modernos</strong> para profesionales y pequeñas empresas, aplicando buenas prácticas de <strong>UX/UI</strong>, <strong>diseño responsive</strong> y <strong>SEO</strong>. En este rol, no solo ejecuto la parte técnica, sino también me encargo de <strong>vender los proyectos</strong>, <strong>negociar presupuestos</strong>, <strong>comunicarme con clientes</strong> y asegurarme de brindar una <strong>experiencia clara, cercana y profesional</strong>, además de <strong>liderar</strong> al equipo que trabaja conmigo. Esto potenció mi <strong>perfil comercial</strong>, mi <strong>capacidad de persuasión</strong> y mi <strong>trato humano</strong>, habilidades que hoy considero clave en cualquier entorno profesional. <br>Ambas experiencias fortalecieron mis <strong>habilidades organizativas</strong>, de <strong>liderazgo</strong> y <strong>comunicación</strong>, que complemento con mi formación de grado en informática.
       </p>
     </div>
+
+    <div class="accordion-section">
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque1')">Formación y perfil académico</button>
+      <div id="bloque1" class="accordion-content">
+        Soy una persona <strong>organizada</strong>, <strong>detallista</strong> y siempre <strong>dispuesta a aprender</strong>. Me desenvuelvo bien trabajando tanto <strong>solo</strong> como en <strong>equipo</strong>. Actualmente, estoy cursando el quinto y último año de la carrera <strong>Ingeniería Informática</strong>, ya habiendo aprobado más del 85% de las materias y obteniendo como resultado el <strong>Título Intermedio de Analista en Informática</strong>. En mi tiempo libre busco seguir <strong>capacitándome</strong>, aprendiendo nuevas tecnologías y profundizando en las que ya conozco. Paralelamente, estudio <strong>inglés</strong> con el objetivo de alcanzar el nivel C2.
+      </div>
+
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque2')">Autogestión y visión emprendedora</button>
+      <div id="bloque2" class="accordion-content">
+        Desde los 17 años dirijo una <strong>empresa de adiestramiento canino</strong>, en la que me encargo personalmente de <strong>comunicarme con los clientes</strong>, <strong>entender sus necesidades</strong> y <strong>dictar las clases</strong>, logrando más de <strong>1000 casos exitosos</strong> con resultados comprobables. Esta experiencia me permitió desarrollar una <strong>excelente capacidad para explicar conceptos</strong>, generar <strong>confianza</strong> y mantener una <strong>comunicación efectiva</strong> con públicos diversos. Parte de esta trayectoria puede visualizarse en <a href="https://adiestramientocaninojirok.com" target="_blank">la web del emprendimiento</a>.
+      </div>
+
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque3')">Liderazgo y gestión de proyectos</button>
+      <div id="bloque3" class="accordion-content">
+        Luego de años trabajando como <strong>freelancer</strong>, fundé un <strong>estudio de diseño web</strong>, en el que desarrollamos <strong>sitios modernos</strong> para profesionales y pequeñas empresas, aplicando buenas prácticas de <strong>UX/UI</strong>, <strong>diseño responsive</strong> y <strong>SEO</strong>. En este rol, no solo ejecuto la parte técnica, sino también me encargo de <strong>vender los proyectos</strong>, <strong>negociar presupuestos</strong>, <strong>comunicarme con clientes</strong> y asegurarme de brindar una <strong>experiencia clara, cercana y profesional</strong>, además de <strong>liderar</strong> al equipo que trabaja conmigo.
+      </div>
+
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque4')">Empatía, adaptabilidad y colaboración</button>
+      <div id="bloque4" class="accordion-content">
+        Estas experiencias fortalecieron mis <strong>habilidades organizativas</strong>, de <strong>liderazgo</strong> y <strong>comunicación</strong>, que complemento con mi formación de grado en informática. También potenció mi <strong>perfil comercial</strong>, mi <strong>capacidad de persuasión</strong> y mi <strong>trato humano</strong>, habilidades que considero clave en cualquier entorno profesional.
+      </div>
+    </div>
+
 
   </section>
 
@@ -319,6 +342,14 @@
   menuLinks.forEach(link => {
     link.addEventListener("click", closeMobileMenu);
   });
+</script>
+
+
+<script>
+function toggleAcordeon(id) {
+  const section = document.getElementById(id);
+  section.style.display = section.style.display === "block" ? "none" : "block";
+}
 </script>
 
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="format-detection" content="telephone=no">
   <title>Mirko Melfi - Full Stack Developer</title>
-  <link rel="stylesheet" href="styles.css?v=1.4" />
+  <link rel="stylesheet" href="styles.css?v=1.5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,7 @@
   <div class="hero-content">
     <div class="hero-texto">
       <p class="intro">Hi, I'm Mirko Melfi</p>
-      <h1>Full Stack Developer</h1>
+      <h1>IT analyst</h1>
       <p class="descripcion">
         I'm seeking opportunities to join a development team and continue growing professionally.
         On this website, I share real projects, technologies I work with, and how I apply good development practices.
@@ -75,13 +75,38 @@
   <h2>About Me</h2>
   <div class="quien-soy-texto">
     <p>
-      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Computer Engineering</strong> degree, having completed over 85% of the courses and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I continue <strong>training</strong>, learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
+      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I am used to <strong>read</strong>, and continue learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
       <br><br>
       Beyond my academic background, I lead two <strong>personal projects</strong> that showcase my <strong>entrepreneurial</strong> spirit. Since the age of 17, I have managed a <strong>dog training business</strong>, personally handling <strong>client communication</strong>, <strong>understanding their needs</strong>, and <strong>conducting classes</strong>, achieving over <strong>1000 successful cases</strong> with proven results. This experience has honed my <strong>ability to explain concepts</strong>, build <strong>trust</strong>, and maintain <strong>effective communication</strong> with diverse audiences. Part of this journey can be seen on <a href="https://adiestramientocaninojirok.com" target="_blank">the business website</a>.
       <br><br>
       More recently, after years of freelancing, I founded a <strong>web design studio</strong> where we develop <strong>modern websites</strong> for professionals and small businesses, applying best practices in <strong>UX/UI</strong>, <strong>responsive design</strong>, and <strong>SEO</strong>. In this role, I not only handle the technical aspects but also <strong>sell projects</strong>, <strong>negotiate budgets</strong>, <strong>communicate with clients</strong>, and ensure a <strong>clear, approachable, and professional experience</strong>, as well as <strong>leading</strong> the team working with me. This has enhanced my <strong>commercial profile</strong>, <strong>persuasion skills</strong>, and <strong>human approach</strong>, which I consider key in any professional setting. <br>Both experiences have strengthened my <strong>organizational</strong>, <strong>leadership</strong>, and <strong>communication</strong> skills, complementing my academic background in computer science.
     </p>
   </div>
+
+  <div class="accordion-section">
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque1')">Academic Background and Education</button>
+    <div id="bloque1" class="accordion-content">
+      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I am used to <strong>read</strong>, and continue learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque2')">Self-Management and Entrepreneurial Vision</button>
+    <div id="bloque2" class="accordion-content">
+      Since the age of 17, I have managed a <strong>dog training business</strong>, personally handling <strong>client communication</strong>, <strong>understanding their needs</strong>, and <strong>conducting classes</strong>, achieving over <strong>1000 successful cases</strong> with proven results. This experience has honed my <strong>ability to explain concepts</strong>, build <strong>trust</strong>, and maintain <strong>effective communication</strong> with diverse audiences. Part of this journey can be seen on <a href="https://adiestramientocaninojirok.com" target="_blank">the business website</a>.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque3')">Leadership and Project Management</button>
+    <div id="bloque3" class="accordion-content">
+      After years of freelancing, I founded a <strong>web design studio</strong> where we develop <strong>modern websites</strong> for professionals and small businesses, applying best practices in <strong>UX/UI</strong>, <strong>responsive design</strong>, and <strong>SEO</strong>. In this role, I not only handle the technical aspects but also <strong>sell projects</strong>, <strong>negotiate budgets</strong>, <strong>communicate with clients</strong>, and ensure a <strong>clear, approachable, and professional experience</strong>, as well as <strong>leading</strong> the team working with me.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque4')">Empathy, Adaptability and Collaboration</button>
+    <div id="bloque4" class="accordion-content">
+      These experiences have strengthened my <strong>organizational</strong>, <strong>leadership</strong>, and <strong>communication</strong> skills, complementing my computer science education. They also enhanced my <strong>commercial profile</strong>, <strong>persuasion skills</strong>, and <strong>human approach</strong>, which I consider essential in any professional environment.
+    </div>
+  </div>
+
+
+
 </section>
 
 <section class="formacion" id="formacion">
@@ -313,6 +338,15 @@
     link.addEventListener("click", closeMobileMenu);
   });
 </script>
+
+
+<script>
+function toggleAcordeon(id) {
+  const section = document.getElementById(id);
+  section.style.display = section.style.display === "block" ? "none" : "block";
+}
+</script>
+
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
