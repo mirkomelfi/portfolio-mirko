@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="format-detection" content="telephone=no">
   <title>Mirko Melfi - Full Stack Developer</title>
-  <link rel="stylesheet" href="styles.css?v=1.5" />
+  <link rel="stylesheet" href="styles.css?v=1.6" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -75,7 +75,7 @@
   <h2>About Me</h2>
   <div class="quien-soy-texto">
     <p>
-      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I am used to <strong>read</strong>, and continue learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
+      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree as an IT Analyst</strong>. In my free time, I seek to continue <strong>learning</strong> new technologies and deepening my knowledge on the ones I already know. I have <strong>C1 level</strong> of English, and I am still studying <strong>English</strong> with the goal of reaching C2 level.
       <br><br>
       Beyond my academic background, I lead two <strong>personal projects</strong> that showcase my <strong>entrepreneurial</strong> spirit. Since the age of 17, I have managed a <strong>dog training business</strong>, personally handling <strong>client communication</strong>, <strong>understanding their needs</strong>, and <strong>conducting classes</strong>, achieving over <strong>1000 successful cases</strong> with proven results. This experience has honed my <strong>ability to explain concepts</strong>, build <strong>trust</strong>, and maintain <strong>effective communication</strong> with diverse audiences. Part of this journey can be seen on <a href="https://adiestramientocaninojirok.com" target="_blank">the business website</a>.
       <br><br>
@@ -84,22 +84,22 @@
   </div>
 
   <div class="accordion-section">
-    <button class="accordion-btn" onclick="toggleAcordeon('bloque1')">Academic Background and Education</button>
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque1',this)">Academic Background and Education <span class="arrow">›</span></button>
     <div id="bloque1" class="accordion-content">
-      I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I am used to <strong>read</strong>, and continue learning new technologies, and deepening my knowledge in existing ones. I also study <strong>English</strong> with the goal of reaching C2 level.
+           I am an <strong>organized</strong>, <strong>meticulous</strong> person, always <strong>eager to learn</strong>. I work well both <strong>independently</strong> and in <strong>teams</strong>. Currently, I'm in the fifth and final year of my <strong>Software Engineering</strong> degree, having completed over 85% of the subjects and earning the <strong>Intermediate Degree in Informatics</strong>. In my free time, I seek to continue <strong>learning</strong> new technologies and deepening my knowledge on the ones I already know. I have <strong>C1 level</strong> of English, and I am still studying <strong>English</strong> with the goal of reaching C2 level.
     </div>
 
-    <button class="accordion-btn" onclick="toggleAcordeon('bloque2')">Self-Management and Entrepreneurial Vision</button>
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque2',this)">Self-Management and Entrepreneurship <span class="arrow">›</span></button>
     <div id="bloque2" class="accordion-content">
       Since the age of 17, I have managed a <strong>dog training business</strong>, personally handling <strong>client communication</strong>, <strong>understanding their needs</strong>, and <strong>conducting classes</strong>, achieving over <strong>1000 successful cases</strong> with proven results. This experience has honed my <strong>ability to explain concepts</strong>, build <strong>trust</strong>, and maintain <strong>effective communication</strong> with diverse audiences. Part of this journey can be seen on <a href="https://adiestramientocaninojirok.com" target="_blank">the business website</a>.
     </div>
 
-    <button class="accordion-btn" onclick="toggleAcordeon('bloque3')">Leadership and Project Management</button>
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque3',this)">Leadership and Project Management <span class="arrow">›</span></button>
     <div id="bloque3" class="accordion-content">
       After years of freelancing, I founded a <strong>web design studio</strong> where we develop <strong>modern websites</strong> for professionals and small businesses, applying best practices in <strong>UX/UI</strong>, <strong>responsive design</strong>, and <strong>SEO</strong>. In this role, I not only handle the technical aspects but also <strong>sell projects</strong>, <strong>negotiate budgets</strong>, <strong>communicate with clients</strong>, and ensure a <strong>clear, approachable, and professional experience</strong>, as well as <strong>leading</strong> the team working with me.
     </div>
 
-    <button class="accordion-btn" onclick="toggleAcordeon('bloque4')">Empathy, Adaptability and Collaboration</button>
+    <button class="accordion-btn" onclick="toggleAcordeon('bloque4',this)">Empathy, Adaptability and Collaboration <span class="arrow">›</span></button>
     <div id="bloque4" class="accordion-content">
       These experiences have strengthened my <strong>organizational</strong>, <strong>leadership</strong>, and <strong>communication</strong> skills, complementing my computer science education. They also enhanced my <strong>commercial profile</strong>, <strong>persuasion skills</strong>, and <strong>human approach</strong>, which I consider essential in any professional environment.
     </div>
@@ -292,6 +292,12 @@
           </a>
           <p>LinkedIn Profile</p>
         </div>
+        <div class="items-contact">
+          <a href="/assets/Curriculum(esp).pdf" download class="btn-descarga">
+            <img src="/assets/icono-download.png" alt="Descargar">
+          </a>
+          <p>Download CV</p>
+         </div>
       </div>
     </div>
   </section>
@@ -340,11 +346,35 @@
 </script>
 
 
-<script>
-function toggleAcordeon(id) {
-  const section = document.getElementById(id);
-  section.style.display = section.style.display === "block" ? "none" : "block";
-}
+ <script>
+  function toggleAcordeon(id, button) {
+    const content = document.getElementById(id);
+    const allContents = document.querySelectorAll('.accordion-content');
+    const allButtons = document.querySelectorAll('.accordion-btn');
+
+    // Cierra todos
+    allContents.forEach(c => {
+      if (c !== content) {
+        c.style.maxHeight = null;
+        c.style.overflow = "hidden";
+      }
+    });
+
+    allButtons.forEach(b => {
+      if (b !== button) b.classList.remove('active');
+    });
+
+    // Toggle actual
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      content.style.overflow = "hidden";
+      button.classList.remove('active');
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.overflow = "visible";
+      button.classList.add('active');
+    }
+  }
 </script>
 
 

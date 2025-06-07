@@ -558,7 +558,7 @@ padding-bottom: 1rem;
 }
 
 .proyectos {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   background-color: var(--primario); /* fondo oscuro */
   color: white;
 }
@@ -694,6 +694,12 @@ padding-bottom: 1rem;
   width: 70px;
   padding: 10px;
 }
+
+.btn-descarga img{
+  height: 60px;
+  width: 60px;
+}
+
 
 /* FOOTER */
 footer {
@@ -832,32 +838,47 @@ footer {
   }
 
   .accordion-btn {
-    width: 100%;
-    padding: 0.9rem;
-    text-align: left;
-    font-weight: 600;
-    background-color: #0b0d2c;
-    color: white;
-    border: none;
-    border-bottom: 1px solid #222;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 1rem;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
   }
+  .arrow{
+    padding-left: 2px;
+  }
+  .accordion-btn .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-btn.active .arrow {
+    transform: rotate(90deg);
+  }
+
 
   .accordion-btn:hover {
     background-color: #141740;
   }
 
-  .accordion-content {
-    display: none;
-    padding: 1rem;
-    background-color: #11132f;
-    color: #ddd;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    border-bottom: 1px solid #222;
-  }
+ .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  background-color: #11132f;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
   .accordion-content a{
   text-decoration: none;
   }

@@ -94,22 +94,22 @@
     </div>
 
     <div class="accordion-section">
-      <button class="accordion-btn" onclick="toggleAcordeon('bloque1')">Formación y perfil académico</button>
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque1',this)">Formación y perfil académico <span class="arrow">›</span></button>
       <div id="bloque1" class="accordion-content">
         Soy una persona <strong>organizada</strong>, <strong>detallista</strong> y siempre <strong>dispuesta a aprender</strong>. Me desenvuelvo bien trabajando tanto <strong>solo</strong> como en <strong>equipo</strong>. Actualmente, estoy cursando el quinto y último año de la carrera <strong>Ingeniería Informática</strong>, ya habiendo aprobado más del 85% de las materias y obteniendo como resultado el <strong>Título Intermedio de Analista en Informática</strong>. En mi tiempo libre busco seguir <strong>capacitándome</strong>, aprendiendo nuevas tecnologías y profundizando en las que ya conozco. Paralelamente, estudio <strong>inglés</strong> con el objetivo de alcanzar el nivel C2.
       </div>
 
-      <button class="accordion-btn" onclick="toggleAcordeon('bloque2')">Autogestión y visión emprendedora</button>
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque2',this)">Autogestión y visión emprendedora <span class="arrow">›</span></button>
       <div id="bloque2" class="accordion-content">
         Desde los 17 años dirijo una <strong>empresa de adiestramiento canino</strong>, en la que me encargo personalmente de <strong>comunicarme con los clientes</strong>, <strong>entender sus necesidades</strong> y <strong>dictar las clases</strong>, logrando más de <strong>1000 casos exitosos</strong> con resultados comprobables. Esta experiencia me permitió desarrollar una <strong>excelente capacidad para explicar conceptos</strong>, generar <strong>confianza</strong> y mantener una <strong>comunicación efectiva</strong> con públicos diversos. Parte de esta trayectoria puede visualizarse en <a href="https://adiestramientocaninojirok.com" target="_blank">la web del emprendimiento</a>.
       </div>
 
-      <button class="accordion-btn" onclick="toggleAcordeon('bloque3')">Liderazgo y gestión de proyectos</button>
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque3',this)">Liderazgo y gestión de proyectos <span class="arrow">›</span></button>
       <div id="bloque3" class="accordion-content">
         Luego de años trabajando como <strong>freelancer</strong>, fundé un <strong>estudio de diseño web</strong>, en el que desarrollamos <strong>sitios modernos</strong> para profesionales y pequeñas empresas, aplicando buenas prácticas de <strong>UX/UI</strong>, <strong>diseño responsive</strong> y <strong>SEO</strong>. En este rol, no solo ejecuto la parte técnica, sino también me encargo de <strong>vender los proyectos</strong>, <strong>negociar presupuestos</strong>, <strong>comunicarme con clientes</strong> y asegurarme de brindar una <strong>experiencia clara, cercana y profesional</strong>, además de <strong>liderar</strong> al equipo que trabaja conmigo.
       </div>
 
-      <button class="accordion-btn" onclick="toggleAcordeon('bloque4')">Empatía, adaptabilidad y colaboración</button>
+      <button class="accordion-btn" onclick="toggleAcordeon('bloque4',this)">Empatía, adaptabilidad y colaboración <span class="arrow">›</span></button>
       <div id="bloque4" class="accordion-content">
         Estas experiencias fortalecieron mis <strong>habilidades organizativas</strong>, de <strong>liderazgo</strong> y <strong>comunicación</strong>, que complemento con mi formación de grado en informática. También potenció mi <strong>perfil comercial</strong>, mi <strong>capacidad de persuasión</strong> y mi <strong>trato humano</strong>, habilidades que considero clave en cualquier entorno profesional.
       </div>
@@ -299,6 +299,13 @@
             </a>
             <p>Perfil LinkedIn</p>
           </div>
+          <div class="items-contact">
+            <a href="/assets/Curriculum(esp).pdf" download class="btn-descarga">
+              <img src="/assets/icono-download.png" alt="Descargar">
+            </a>
+            <p>Descargar CV</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -345,12 +352,40 @@
 </script>
 
 
-<script>
-function toggleAcordeon(id) {
-  const section = document.getElementById(id);
-  section.style.display = section.style.display === "block" ? "none" : "block";
-}
+
+
+ <script>
+  function toggleAcordeon(id, button) {
+    const content = document.getElementById(id);
+    const allContents = document.querySelectorAll('.accordion-content');
+    const allButtons = document.querySelectorAll('.accordion-btn');
+
+    // Cierra todos
+    allContents.forEach(c => {
+      if (c !== content) {
+        c.style.maxHeight = null;
+        c.style.overflow = "hidden";
+      }
+    });
+
+    allButtons.forEach(b => {
+      if (b !== button) b.classList.remove('active');
+    });
+
+    // Toggle actual
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      content.style.overflow = "hidden";
+      button.classList.remove('active');
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.overflow = "visible";
+      button.classList.add('active');
+    }
+  }
 </script>
+
+
 
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
