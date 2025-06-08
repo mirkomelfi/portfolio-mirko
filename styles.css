@@ -102,7 +102,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 900;
   display: none;
 }
@@ -115,7 +115,7 @@ body {
   right: 0;
   height: 100vh;
   width: 60vw;
-  background-color: #ccd0e0;
+  background-color: var(--secundario);
   padding: 2rem;
   z-index: 1000;
   flex-direction: column;
@@ -131,8 +131,8 @@ body {
 
 .mobile-menu ul li a {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #111;
+  font-weight: 600;
+  color: #000;
   text-decoration: none;
 }
 
@@ -217,10 +217,10 @@ body {
 }
 
 .hero-imagen img {
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   border-radius: 20px;
-  transform: translateY(30px);
+  transform: translateY(60px);
 }
 
 .hero .btn-lang {
@@ -349,13 +349,12 @@ body {
   }
 
   .hero-imagen {
-    margin-left: 0;
-    margin-top: 2rem;
+    margin: 0;
   }
 
   .hero-imagen img {
-    height: 250px;
-    transform: none;
+    height: 300px;
+    transform: translateY(45px);
   }
 }
 
@@ -602,6 +601,17 @@ padding-bottom: 1rem;
   object-fit: cover;
 }
 
+.proyecto-card .img {
+  /*width: 100%;*/
+  width: 70px;
+  height: 70px;
+  align-self: center;
+  border-radius: 0.7rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  object-fit: cover;
+}
+
 .proyecto-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -651,6 +661,7 @@ padding-bottom: 1rem;
   width: 50%;
   display: flex;
   align-items: center;
+  padding: 4rem 2rem;
 }
 
 .contacto {
@@ -730,6 +741,7 @@ footer {
 
 .contacto-form{
   display: flex;
+ justify-content: center;
 }
 
 .txt-form{
@@ -760,6 +772,7 @@ footer {
   padding: 0.8rem;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -775,6 +788,8 @@ footer {
     width: 80%;
     flex-direction: column;
     margin-bottom: 1rem;
+    padding: 0rem 0rem;
+    
   }
 
   .txt-form{
@@ -842,8 +857,8 @@ footer {
       text-align: left;
       background: none;
       border: none;
-      padding: 1rem 0;
-      font-size: 1.1rem;
+      padding: 1rem 0.7rem;
+      font-size: 1rem;
       font-weight: 600;
       color: white;
       border-bottom: 1px solid #222;
@@ -853,7 +868,7 @@ footer {
       cursor: pointer;
   }
   .arrow{
-    padding-left: 2px;
+    padding: 0 4px;
   }
   .accordion-btn .arrow {
     transition: transform 0.3s ease;
