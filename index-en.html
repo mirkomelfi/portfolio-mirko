@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="format-detection" content="telephone=no">
   <title>Mirko Melfi - Full Stack Developer</title>
-  <link rel="stylesheet" href="styles.css?v=1.6" />
+  <link rel="stylesheet" href="styles.css?v=1.7" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -308,6 +308,7 @@
     <form class="form-contacto" id="form-contacto">
       <input type="text" name="from_name" placeholder="Name" required>
       <input type="email" name="reply_to" placeholder="Email" required>
+      <!--input type="text" name="subject" placeholder="Subject" required-->
       <textarea name="message" rows="4" placeholder="Message..." required></textarea>
       <button type="submit">Send message</button>
     </form>
@@ -357,6 +358,8 @@
       if (c !== content) {
         c.style.maxHeight = null;
         c.style.overflow = "hidden";
+        c.style.paddingTop= "0";
+        c.style.paddingBottom= "0";  
       }
     });
 
@@ -368,10 +371,14 @@
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
       content.style.overflow = "hidden";
+      content.style.paddingTop= "0";
+      content.style.paddingBottom= "0";
       button.classList.remove('active');
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = content.scrollHeight+30 + "px";
       content.style.overflow = "visible";
+      content.style.paddingTop= "0.5rem"
+      content.style.paddingBottom= "0.5rem"
       button.classList.add('active');
     }
   }

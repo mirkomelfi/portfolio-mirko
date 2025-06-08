@@ -18,10 +18,6 @@ body {
   color: var(--azul-oscuro);
 }
 
-a:visited {
-  color: var(--azul-francia);
-  text-decoration: none; /* opcional */
-}
 
 .contenedor {
   max-width: 1300px;
@@ -383,9 +379,16 @@ padding-bottom: 1rem;
   column-gap: 2rem;
   text-align: left;
 }
+
 .quien-soy-texto a{
   text-decoration: none;
 }
+
+.quien-soy-texto a:visited {
+  color: var(--azul-francia);
+  text-decoration: none;
+}
+
 .quien-soy-texto a:hover{
    text-decoration: underline;
 }
@@ -695,10 +698,7 @@ padding-bottom: 1rem;
   padding: 10px;
 }
 
-.btn-descarga img{
-  height: 60px;
-  width: 60px;
-}
+
 
 
 /* FOOTER */
@@ -884,6 +884,10 @@ footer {
   }
   .accordion-content a:hover{
     text-decoration: underline;
+  }
+  .accordion-content a:visited {
+    color: var(--azul-francia);
+    text-decoration: none; 
   }
 }
 
