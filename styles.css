@@ -955,3 +955,27 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: 410px) {
+  .botones-proyecto {
+
+  }
+  .btn-proyecto {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.9rem;
+    margin-right: 0.1rem;
+}
+
+}
+
+@media (max-width: 358px) {
+  .contacto-form {
+      padding: 0;
+  }
+  .btn-proyecto {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+    margin-right: 0.1rem;
+}
+
+}
